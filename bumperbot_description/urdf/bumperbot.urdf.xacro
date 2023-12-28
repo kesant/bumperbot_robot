@@ -9,6 +9,12 @@
                 <mesh filename="package://bumperbot_description/meshes/base_link.STL" />
             </geometry>
         </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://bumperbot_description/meshes/base_link.STL" />
+            </geometry>
+        </collision>
 
     </link>
     <joint name="base_joint" type="fixed">
@@ -23,6 +29,12 @@
                 <mesh filename="package://bumperbot_description/meshes/wheel_right_link.STL" />
             </geometry>
         </visual>
+        <collision>
+            <origin rpy="0 -0.015 0" xyz="1.57 0 0"/>
+            <geometry>
+                <sphere radius="0.033"/>
+            </geometry>
+        </collision>
     </link>
     <joint name="wheel_right_joint" type="continuous" >
         <parent link="base_link"/>
@@ -38,6 +50,12 @@
                 <mesh filename="package://bumperbot_description/meshes/wheel_left_link.STL" />
             </geometry>
         </visual>
+        <collision>
+            <origin rpy="0 0.015 0" xyz="1.57 0 0"/>
+            <geometry>
+                <sphere radius="0.033"/>
+            </geometry>
+        </collision>
     </link>
     <joint name="wheel_left_joint" type="continuous" >
         <parent link="base_link"/>
@@ -53,6 +71,12 @@
                 <mesh filename="package://bumperbot_description/meshes/caster_front_link.STL"/>
             </geometry>
         </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <sphere radius="0.005"/>
+            </geometry>
+        </collision>
     </link>
     <joint name="caster_front_joint" type="fixed">
         <parent link="base_link"/>
@@ -67,6 +91,12 @@
                 <mesh filename="package://bumperbot_description/meshes/caster_rear_link.STL"/>
             </geometry>
         </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <sphere radius="0.005"/>
+            </geometry>
+        </collision>
     </link>
     <joint name="caster_rear_joint" type="fixed">
         <parent link="base_link"/>
